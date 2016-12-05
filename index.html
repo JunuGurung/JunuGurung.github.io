@@ -1,17 +1,204 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="prism/prism-atom-dark.css">
+	<script type="text/javascript" src="prism/prism.ruby.js" ></script>
+	<script type="text/javascript" src="prism/prism.js"></script>
+	<title>Junu Gurung</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" name="description" content="Highly motivated, passionate, multilingual web developer who works well both independently and as part of a team, looking to be impactful at a growing company. My key technical skills include Ruby on Rails, Git, JavaScript, and Heroku.">
+	
+	
 </head>
 <body>
-	<div class="about">
-		<img src="images/junu.jpg" class="img" />
-		<h1>Junu Gurung</h1>
-		<h2>Front end developer</h2>
-		<hr class="horizontal" />
-		<p class="bio">Lorem Ipsum is simply dummy text of the printing and typesetting industry.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	<div class="about-container">
+		<ul>
+			<li><a href="#" class="nav-link">ABOUT</a></li>
+			<li><a href="#code-snippet" class="nav-link">CODE SAMPLES</a></li>
+			<li><a href="#web-apps" class="nav-link">WEB APPS</a></li>
+			<li><a href="#my-skills" class="nav-link">SKILLS</a></li>
+			<li class="hire-me"><a href="#contact-me" class="nav-link">HIRE ME</a></li>	
+		</ul>
+		<div class="about">
+			<img src="images/junu.jpg" class="img" />
+			<h1 class="animated fadeInDownBig">Junu Gurung</h1>
+			<h2 class="animated bounceInUp">Front end developer</h2>
+			<hr class="horizontal-first" />
+			<p class="bio animated swing">
+				Highly motivated, passionate, multilingual web developer who works well both independently and as part of a team, looking to be impactful at a growing company. My key technical skills include Ruby on Rails, Git, JavaScript, and Heroku.</p>
+		</div>
 	</div>
+
+	<h3 id="code-snippet" class="animated wobble">Code Snippet</h3>
+	<hr class="horizontal-second" />
+
+	<div class="box">
+		 <h4>Twillio REST API</h4>
+      <p>
+        A simple text messaging app on twillio api. Enter a phone number and send text message. Sending an SMS or MMS is one of the most common tasks performed on the Twilio Platform.
+      </p>
+	</div>
+
+	<div class="box">
+		<pre> <code class="language-ruby">
+			class Phone
+				attr_accessor :number
+				include ActiveModel::Model
+
+			include Messenger
+
+			def clean_number
+				number=self.number.scan(/\d+/).join
+				number[0]==&quot;1&quot;? number[0]='' :number
+				number unless number.length!=10 
+				end			
+			end
+			</code></pre>
+	</div>
+
+	<br class="clear" />
+
+	<div class="box">
+	  <pre> <code class="language-ruby">
+		class PinsController &lt; ApplicationController
+		  before_action :set_pin, only: [:show, :edit, :update, :destroy]
+		  before_action :correct_user, only: [:edit, :update, :destroy]
+		  before_action :authenticate_user! , except: [:index, :show ]
+		  # GET /pins
+		  # GET /pins.json
+		  def index
+		    @pins = Pin.all
+		  end</code></pre>
+	</div>
+
+	<div class="box">
+	  <h4>Pinteresting App</h4>
+	  <p>
+	    Pinteresting app allows to create your own pins and save it safely. You can create, retrive, update and destory pins any time. Authentication and authorization has been established within application to maintain privacy among different users. Sessions has been maintained on this app build upon ruby on rails. Used of multiple popular and useful gems to make rails application fast and dynamic.
+	  </p>
+	</div>
+
+	<br class="clear" />
+	
+	<div class="box">
+	 <h4>Portfolio</h4>
+	  <p>
+	    I used HTML5, CSS, JavaScript & Jquery on making this particular <b>static</b> website. HTML5 & JavaScript are fun to learn and explore.
+	    Feel free to explore by yourself.
+	  </p>
+	</div>
+
+	<div class="box">
+	  <pre> <code class="language-ruby">
+		&lt;!DOCTYPE html&gt;
+			&lt;html&gt;
+			&lt;head&gt;
+				&lt;meta charset=&quot;utf-8&quot;&gt;
+				&lt;title&gt;Basic standard of HTML5&lt;/title&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+				&lt;header&gt;&lt;/header&gt;
+				&lt;nav&gt;&lt;/nav&gt;
+				&lt;section&gt;&lt;/section&gt;
+				&lt;article&gt;&lt;/article&gt;
+				&lt;footer&gt;&lt;/footer&gt;
+			&lt;/body&gt;
+			&lt;/html&gt;</code></pre>
+	</div>
+
+	<br class="clear" />
+
+	<h3 id="web-apps">Web Apps</h3>
+	<hr class="horizontal-second" />
+	<div class="box">
+		<h4>Pinteresting app</h4>
+		<img src="images/pinterest.jpg" class="full-width" />
+		 <p>
+        	Build on Ruby on Rails. PostgreSql database was used integrating many gems to make this app more dynamic and usable.
+  		</p>
+	</div>
+	<div class="box">
+  <h4>Yelp Clone</h4>
+  <img src="images/lights.jpg" class="full-width" />
+  <p>
+    A Yelp clone that integrates with the Google Maps API 
+    and includes features like user comments, star ratings,
+    image uploading, and user authentication.
+  </p>
+	</div>
+	<br class="clear" />
+
+<!--	<div class="box">
+	  <h4>Two-Sided Market Place</h4>
+	  <img src="images/lights.jpg" class="full-width" />
+	  <p>
+	    A two-sided, video-streaming marketplace platform that
+	    features credit card payment capabilities, user role
+	    management, complex user interfaces, and advanced
+	    database relationships.
+	  </p>
+	</div>
+	<div class="box">
+	  <h4>Test Driven Development</h4>
+	  <img src="images/lights.jpg" class="full-width" />
+	  <p>
+	    An Instagram clone that was built using industry-standard, test-driven
+	    development following numerous red/green/refactor cycles.
+	  </p>
+	</div>
+	<br class="clear" />
+	<div class="box">
+	  <h4>Single Page Todo Application</h4>
+	  <img src="images/lights.jpg" class="full-width" />
+	  <p>
+	    This single-page to-do application features a
+	    fluid user interface that– by using JavaScript–
+	    allows users to rapidly add dynamic content.
+	  </p>
+	</div>
+	<div class="box">
+	  <h4>Agile Team Project</h4>
+	  <img src="images/lights.jpg" class="full-width" />
+	  <p>
+	    Worked on an Agile software development team building
+	    a chess application. Under the guidance of a senior software engineer,
+	    we had weekly Agile team meetings for code reviews, sprint planning,
+	    and feature assignments.
+	  </p>
+	</div>
+	<br class="clear" /> -->
+	<div class="slant-container">
+		<div class="slant">Hey, I'm from Nepal,located in the Great Himalayan Range. Recently I moved to Boston by myself. And I'm tackling with the challanges of life along with coding. 
+		Life is alwaysthere to throw alots of surprising shades of ups & down. 
+		I Would be happily speaking "Hashtag #challangAccepted."
+	</div>
+
+	<h3 id="my-skills">Skills &amp; Tools</h3>
+	<hr class="horizontal-second" />
+
+	<p class="skill-tool">
+	  Junu is comfortable with the following tools and has developed expertise & proficiency in the following programming languages. 
+	  
+	</p>
+	<div class="icons">
+		
+		<br class="clear"/>
+		<img src="skills/skills.png" class="icon"/>
+	</div>
+	<div id="contact-me" class="contact-me">
+		<h1 class="contact-headline">Contact</h1>
+		<hr class="horizontal-second" />
+		<p class="contact-info">
+	    Currently entertaining new opportunities.
+	    Please get in touch via email:
+	  </p>
+	  <p><a href="mailto:junugurung48@gmail.com" class="contact-link">
+	  	junugurung48@gmail.com
+	  </a></p>
+		
+	</div>
+
 </body>
 </html>
