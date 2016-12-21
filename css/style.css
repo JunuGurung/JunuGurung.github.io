@@ -141,3 +141,69 @@ p{
 	filter: alpha(opacity=50); /* For IE8 and earlier */
 	 /*transition: transform 2s; imp*/
 }
+.geni-img:hover{
+	/*transform: scale(1.3); imp*/
+
+}
+img:hover{
+	opacity: 1.0;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+.genians-inner{
+	float: left;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	background-color: #45BDE6;
+	padding: 100px;
+	margin-top: 8rem;
+	margin-left: 20rem;
+	border-radius: 3px;
+    font-family: 'Arimo', sans-serif;
+    outline-style: dashed;
+    outline-color:#45BDE6;
+}
+.genians-view{
+	text-decoration: none;
+	color: white;
+	border-bottom:5px solid transparent;
+	padding-bottom: 5px;
+	transition:border-bottom 2s;
+}
+
+.genians-view #menu:active,#menu:hover {
+  border-bottom:3px solid white;
+  text-transform: uppercase;
+}
+
+
+
+
+
+/*.hire-me{
+	border-style: solid;
+	border-color: white;
+
+}*/
+.contact-container {
+  background: #eee;
+  box-shadow: 0px 2px 2px #009627;
+  float: left;
+  margin-bottom: 62px;
+  width: 100%;
+  /*height: 500px;*/
+}
+.contact-header {
+  font-family: 'Work Sans', sans-serif;
+  padding: 0 100px 50px 100px;
+  margin-top: 150px;
+  text-align: center;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.social-container {
+  text-align: center;
+  margin-bottom: 30px; 
+} 
+
